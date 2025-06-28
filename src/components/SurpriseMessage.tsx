@@ -1,7 +1,6 @@
 "use client";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -25,17 +24,25 @@ export function SurpriseMessage() {
         </AlertDialogTrigger>
         <AlertDialogContent className="bg-card/90 backdrop-blur-sm border-accent">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-4xl font-headline text-primary-foreground">A Special Message Just For You...</AlertDialogTitle>
+            <AlertDialogTitle className="text-4xl font-headline text-primary-foreground opacity-0 animate-text-swoop-in" style={{ animationDelay: '100ms' }}>A Special Message Just For You...</AlertDialogTitle>
             <AlertDialogDescription className="text-2xl font-headline text-secondary-foreground pt-4 leading-relaxed">
-              My dearest Khushi, my love, my everything. On your special day, I want to remind you of the incredible light you bring into my life. Every day with you is a gift. I love you more than words can say.
+              <span className="block opacity-0 animate-text-swoop-in" style={{ animationDelay: '400ms' }}>
+                My dearest Khushi, my love, my everything.
+              </span>
+              <span className="block mt-4 opacity-0 animate-text-swoop-in" style={{ animationDelay: '800ms' }}>
+                On your special day, I want to remind you of the incredible light you bring into my life. Every day with you is a gift. I love you more than words can say.
+              </span>
               <br/><br/>
-              Forever and always,
-              <br/>
-              Rio
+              <span className="block opacity-0 animate-text-swoop-in" style={{ animationDelay: '1200ms' }}>
+                Forever and always,
+              </span>
+              <span className="block opacity-0 animate-text-swoop-in text-3xl text-primary-foreground/90" style={{ animationDelay: '1600ms' }}>
+                Rio
+              </span>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="font-headline text-lg">Close</AlertDialogCancel>
+            <AlertDialogCancel className="font-headline text-lg opacity-0 animate-text-swoop-in" style={{ animationDelay: '2000ms' }}>Close</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

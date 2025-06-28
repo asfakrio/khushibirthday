@@ -122,7 +122,19 @@ export default {
             boxShadow: '0 0 25px hsl(var(--primary) / 0.8), 0 0 50px hsl(var(--accent) / 0.8)',
             animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
           },
-        }
+        },
+        'text-swoop-in': {
+            '0%': {
+                opacity: '0',
+                transform: 'translateY(30px) scale(0.95) rotateX(-20deg)',
+                filter: 'blur(3px)',
+            },
+            '100%': {
+                opacity: '1',
+                transform: 'translateY(0) scale(1) rotateX(0deg)',
+                filter: 'blur(0px)',
+            },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -131,6 +143,7 @@ export default {
         'fade-in-up': 'fade-in-up 1s ease-out forwards',
         'sparkle': 'sparkle 2s ease-in-out infinite',
         'bounce-and-glow': 'bounce-and-glow 2s ease-in-out infinite',
+        'text-swoop-in': 'text-swoop-in 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards',
       },
     },
   },
