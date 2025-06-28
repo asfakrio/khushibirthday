@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import * as Tone from 'tone';
 import { BirthdayHeader } from "@/components/BirthdayHeader";
 import { MemoryLane } from "@/components/MemoryLane";
 import { MusicPlayer } from "@/components/MusicPlayer";
@@ -11,10 +12,17 @@ import { SurpriseMessage } from "@/components/SurpriseMessage";
 export function BirthdayPage({ photos }: { photos: string[] }) {
   const [playMusic, setPlayMusic] = useState(false);
 
-  const handleFirstClick = () => {
-    // This function will only set playMusic to true once.
+  const handleFirstClick = async () => {
+    // This function will only run once to start the music.
     if (!playMusic) {
-      setPlayMusic(true);
+      try {
+        // Start the audio context on user interaction, which is a browser requirement.
+        await Tone.start();
+        // Set state to trigger the music player
+        setPlayMusic(true);
+      } catch (e) {
+        console.error("Could not start audio context", e);
+      }
     }
   };
 

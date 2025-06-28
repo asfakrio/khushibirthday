@@ -1,59 +1,52 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import * as Tone from 'tone';
 
 export function MusicPlayer({ play }: { play: boolean }) {
+  // Use a ref to hold the player instance.
+  // This prevents it from being re-created on every render.
   const playerRef = useRef<Tone.Player | null>(null);
-  const isPlayerReady = useRef(false);
-  const playWhenReady = useRef(false);
 
-  const startAudio = useCallback(async () => {
-    if (!playerRef.current || !isPlayerReady.current) {
-      return;
-    }
-
-    try {
-      await Tone.start();
-      if (playerRef.current.state !== 'started') {
-        playerRef.current.start();
-      }
-    } catch (e) {
-      console.error("Could not start audio", e);
-    }
-  }, []);
-
+  // This effect runs once when the component mounts.
+  // It creates the player and loads the audio file.
   useEffect(() => {
+    // Create a new player
     const player = new Tone.Player({
-      // Use a fixed filename for simplicity
       url: "/audio/music.mp3",
       loop: true,
-      autostart: false,
-      onload: () => {
-        isPlayerReady.current = true;
-        if (playWhenReady.current) {
-          startAudio();
-        }
-      },
+      autostart: false, // Don't start playing automatically
       onerror: (error) => {
           console.error("Error loading music file. Make sure 'music.mp3' exists in `public/audio`.", error);
       }
-    }).toDestination();
+    }).toDestination(); // Connect the player to the output
+
+    // Store the player instance in the ref
     playerRef.current = player;
     
+    // Cleanup function to dispose of the player when the component unmounts
     return () => {
       player.dispose();
     };
-  }, [startAudio]);
-  
-  useEffect(() => {
-    if (play) {
-      playWhenReady.current = true;
-      if (isPlayerReady.current) {
-        startAudio();
-      }
-    }
-  }, [play, startAudio]);
+  }, []); // The empty dependency array ensures this effect runs only once
 
-  return null;
+  // This effect handles playing the music.
+  // It runs whenever the 'play' prop changes.
+  useEffect(() => {
+    const player = playerRef.current;
+
+    // We can only play music if the player has been created and the `play` prop is true.
+    if (player && play) {
+      // Tone.loaded() returns a promise that resolves when all audio files are loaded.
+      // This is the safest way to ensure we don't try to play a file that's not ready.
+      Tone.loaded().then(() => {
+        // Only start the player if it's not already playing.
+        if (player.state !== 'started') {
+          player.start();
+        }
+      });
+    }
+  }, [play]); // This effect is dependent on the 'play' prop
+
+  return null; // This component doesn't render anything
 }
