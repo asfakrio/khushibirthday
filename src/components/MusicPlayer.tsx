@@ -11,6 +11,7 @@ export function MusicPlayer() {
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(50);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const playerRef = useRef<Tone.Player | null>(null);
 
   useEffect(() => {
@@ -19,6 +20,9 @@ export function MusicPlayer() {
             url: "/audio/romantic-music.mp3",
             loop: true,
             autostart: false,
+            onload: () => {
+                setIsLoaded(true);
+            },
         }).toDestination();
         
         playerRef.current = player;
@@ -30,6 +34,8 @@ export function MusicPlayer() {
   }, []);
   
   const handlePlayPause = async () => {
+    if (!isLoaded) return;
+
     if (!isInitialized) {
         try {
             await Tone.start();
@@ -72,11 +78,11 @@ export function MusicPlayer() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-card/80 backdrop-blur-sm p-3 rounded-lg shadow-lg border border-accent/50 flex items-center space-x-3">
-      <Button onClick={handlePlayPause} size="icon" variant="ghost">
+      <Button onClick={handlePlayPause} size="icon" variant="ghost" disabled={!isLoaded}>
         {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
       </Button>
       <div className="flex items-center space-x-2 w-32">
-        <Button onClick={toggleMute} size="icon" variant="ghost" className="h-8 w-8">
+        <Button onClick={toggleMute} size="icon" variant="ghost" className="h-8 w-8" disabled={!isLoaded}>
             {isMuted || volume === 0 ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
         </Button>
         <Slider
@@ -84,6 +90,7 @@ export function MusicPlayer() {
           onValueChange={handleVolumeChange}
           max={100}
           step={1}
+          disabled={!isLoaded}
         />
       </div>
     </div>
