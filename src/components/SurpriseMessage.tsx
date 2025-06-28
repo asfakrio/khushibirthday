@@ -18,7 +18,7 @@ export function SurpriseMessage() {
     <section className="text-center py-20 relative z-10">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button size="lg" className="text-2xl px-8 py-6 font-headline animate-pulse">
+          <Button size="lg" className="text-2xl px-8 py-6 font-headline animate-bounce-and-glow">
             <Gift className="mr-2 h-6 w-6" />
             Click to Reveal a Surprise
           </Button>
