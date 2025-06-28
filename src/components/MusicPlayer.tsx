@@ -1,47 +1,55 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import * as Tone from 'tone';
 
 export function MusicPlayer({ play }: { play: boolean }) {
   const playerRef = useRef<Tone.Player | null>(null);
-  const hasStartedRef = useRef(false);
+  const isPlayerReady = useRef(false);
+  const playWhenReady = useRef(false);
 
-  // Initialize the player
+  const startAudio = useCallback(async () => {
+    if (!playerRef.current || !isPlayerReady.current) {
+      return;
+    }
+
+    try {
+      await Tone.start();
+      if (playerRef.current.state !== 'started') {
+        playerRef.current.start();
+      }
+    } catch (e) {
+      console.error("Could not start audio", e);
+    }
+  }, []); // Empty dependency array because it only uses refs, which are stable.
+
   useEffect(() => {
-    playerRef.current = new Tone.Player({
+    const player = new Tone.Player({
       url: "/audio/your-song.mp3",
       loop: true,
       autostart: false,
+      onload: () => {
+        isPlayerReady.current = true;
+        if (playWhenReady.current) {
+          startAudio();
+        }
+      },
     }).toDestination();
-
+    playerRef.current = player;
+    
     return () => {
-      playerRef.current?.dispose();
+      player.dispose();
     };
-  }, []);
+  }, [startAudio]);
   
-  // Start playing when the 'play' prop becomes true
   useEffect(() => {
-    const startAudio = async () => {
-      if (!playerRef.current || hasStartedRef.current) return;
-
-      try {
-        // This requires a user gesture, which we get from the button click
-        await Tone.start();
-        // Wait for all buffers to load
-        await Tone.loaded();
-        // Start the player
-        playerRef.current.start();
-        hasStartedRef.current = true;
-      } catch (e) {
-        console.error("Could not start audio", e);
-      }
-    };
-
     if (play) {
-      startAudio();
+      playWhenReady.current = true;
+      if (isPlayerReady.current) {
+        startAudio();
+      }
     }
-  }, [play]);
+  }, [play, startAudio]);
 
   return null;
 }
