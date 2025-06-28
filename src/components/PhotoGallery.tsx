@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/carousel"
 
 const photos = [
-  { src: "placeholder_1", alt: "A loving couple", hint: "couple smiling" },
-  { src: "placeholder_2", alt: "A beautiful memory", hint: "couple beach" },
-  { src: "placeholder_3", alt: "A happy moment", hint: "couple nature" },
-  { src: "placeholder_4", alt: "A shared laugh", hint: "couple laughing" },
-  { src: "placeholder_5", alt: "A quiet walk", hint: "couple walking" },
-  { src: "placeholder_6", alt: "A romantic dinner", hint: "couple dinner" },
+  { src: "/images/photo1.jpg", alt: "A loving couple", hint: "couple smiling" },
+  { src: "/images/photo2.jpg", alt: "A beautiful memory", hint: "couple beach" },
+  { src: "/images/photo3.jpg", alt: "A happy moment", hint: "couple nature" },
+  { src: "/images/photo4.jpg", alt: "A shared laugh", hint: "couple laughing" },
+  { src: "/images/photo5.jpg", alt: "A quiet walk", hint: "couple walking" },
+  { src: "/images/photo6.jpg", alt: "A romantic dinner", hint: "couple dinner" },
 ];
 
 export function PhotoGallery() {
@@ -36,7 +36,7 @@ export function PhotoGallery() {
                 <Card className="overflow-hidden bg-card/80 backdrop-blur-sm border-2 border-accent/50 shadow-lg hover:shadow-accent/50 transition-shadow duration-300">
                   <CardContent className="flex aspect-square items-center justify-center p-2">
                      <Image 
-                        src={`https://placehold.co/400x400.png`} 
+                        src={photo.src}
                         alt={photo.alt}
                         width={400}
                         height={400}
