@@ -25,7 +25,8 @@ export function MusicPlayer({ play }: { play: boolean }) {
 
   useEffect(() => {
     const player = new Tone.Player({
-      url: "/audio/REPLACE_WITH_YOUR_SONG_FILENAME.mp3",
+      // Use a fixed filename for simplicity
+      url: "/audio/music.mp3",
       loop: true,
       autostart: false,
       onload: () => {
@@ -34,6 +35,9 @@ export function MusicPlayer({ play }: { play: boolean }) {
           startAudio();
         }
       },
+      onerror: (error) => {
+          console.error("Error loading music file. Make sure 'music.mp3' exists in `public/audio`.", error);
+      }
     }).toDestination();
     playerRef.current = player;
     
