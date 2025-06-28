@@ -5,7 +5,7 @@ const memories = [
     {
         icon: <Heart className="w-8 h-8 text-accent" />,
         title: "The Beginning",
-        text: "From the moment I met you, my world changed forever. It was like a dream I never wanted to wake up from."
+        text: "From the moment I met you, my world changed forever. It was like a dream. but i never wanted Kalesh - KaleshiAurat 😒"
     },
     {
         icon: <Heart className="w-8 h-8 text-accent" />,
