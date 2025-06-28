@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { BirthdayHeader } from "@/components/BirthdayHeader";
 import { MemoryLane } from "@/components/MemoryLane";
 import { MusicPlayer } from "@/components/MusicPlayer";
@@ -6,6 +9,12 @@ import { Sparkles } from "@/components/Sparkles";
 import { SurpriseMessage } from "@/components/SurpriseMessage";
 
 export default function Home() {
+  const [playMusic, setPlayMusic] = useState(false);
+
+  const handleReveal = () => {
+    setPlayMusic(true);
+  };
+
   return (
     <div className="relative min-h-screen w-full bg-background overflow-hidden">
       <Sparkles />
@@ -14,14 +23,14 @@ export default function Home() {
           <BirthdayHeader />
           <PhotoGallery />
           <MemoryLane />
-          <SurpriseMessage />
+          <SurpriseMessage onReveal={handleReveal} />
         </main>
         <footer className="text-center py-8 text-primary-foreground/70 font-headline text-lg">
           <p>Made with Love by Rio for Khushi.</p>
           <p>Happy Birthday! - August 15th</p>
         </footer>
       </div>
-      <MusicPlayer />
+      <MusicPlayer play={playMusic} />
     </div>
   );
 }

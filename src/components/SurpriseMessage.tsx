@@ -12,10 +12,14 @@ import {
 import { Button } from "@/components/ui/button"
 import { Gift } from "lucide-react"
 
-export function SurpriseMessage() {
+export function SurpriseMessage({ onReveal }: { onReveal: () => void }) {
   return (
     <section className="text-center py-20 relative z-10">
-      <AlertDialog>
+      <AlertDialog onOpenChange={(isOpen) => {
+        if (isOpen) {
+          onReveal();
+        }
+      }}>
         <AlertDialogTrigger asChild>
           <Button size="lg" className="text-2xl px-8 py-6 font-headline animate-bounce-and-glow">
             <Gift className="mr-2 h-6 w-6" />
