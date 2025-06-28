@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/carousel"
 
 const photos = [
-  { src: "/images/photo1.jpg", alt: "A loving couple", hint: "couple smiling" },
-  { src: "/images/photo2.jpg", alt: "A beautiful memory", hint: "couple beach" },
-  { src: "/images/photo3.jpg", alt: "A happy moment", hint: "couple nature" },
-  { src: "/images/photo4.jpg", alt: "A shared laugh", hint: "couple laughing" },
-  { src: "/images/photo5.jpg", alt: "A quiet walk", hint: "couple walking" },
-  { src: "/images/photo6.jpg", alt: "A romantic dinner", hint: "couple dinner" },
+  { src: "/images/YOUR_PHOTO_1.jpg", alt: "A loving couple", hint: "couple smiling" },
+  { src: "/images/YOUR_PHOTO_2.jpg", alt: "A beautiful memory", hint: "couple beach" },
+  { src: "/images/YOUR_PHOTO_3.jpg", alt: "A happy moment", hint: "couple nature" },
+  { src: "/images/YOUR_PHOTO_4.jpg", alt: "A shared laugh", hint: "couple laughing" },
+  { src: "/images/YOUR_PHOTO_5.jpg", alt: "A quiet walk", hint: "couple walking" },
+  { src: "/images/YOUR_PHOTO_6.jpg", alt: "A romantic dinner", hint: "couple dinner" },
 ];
 
 export function PhotoGallery() {
