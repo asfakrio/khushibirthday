@@ -37,9 +37,11 @@ export function MusicPlayer({ play }: { play: boolean }) {
 
     // We can only play music if the player has been created and the `play` prop is true.
     if (player && play) {
+      console.log("Attempting to play music...");
       // Tone.loaded() returns a promise that resolves when all audio files are loaded.
       // This is the safest way to ensure we don't try to play a file that's not ready.
       Tone.loaded().then(() => {
+        console.log("Audio files loaded, starting player.");
         // Only start the player if it's not already playing.
         if (player.state !== 'started') {
           player.start();
