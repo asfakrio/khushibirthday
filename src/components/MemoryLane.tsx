@@ -10,7 +10,7 @@ const memories = [
     {
         icon: <Heart className="w-8 h-8 text-accent" />,
         title: "Our Journey",
-        text: "Every laugh, every hug, every shared secret — it's all magic with you. You make the ordinary extraordinary."
+        text: "Every laugh, every moment, every shared secret — it's all magic with you. You make the ordinary extraordinary."
     },
     {
         icon: <Heart className="w-8 h-8 text-accent" />,

@@ -27,11 +27,11 @@ export function SurpriseMessage() {
           <AlertDialogHeader>
             <AlertDialogTitle className="text-4xl font-headline text-primary-foreground">A Special Message Just For You...</AlertDialogTitle>
             <AlertDialogDescription className="text-2xl font-headline text-secondary-foreground pt-4 leading-relaxed">
-              My dearest, my love, my everything. On your special day, I want to remind you of the incredible light you bring into my life. Every day with you is a gift. I love you more than words can say.
+              My dearest Khushi, my love, my everything. On your special day, I want to remind you of the incredible light you bring into my life. Every day with you is a gift. I love you more than words can say.
               <br/><br/>
               Forever and always,
               <br/>
-              Your Name
+              Rio
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
