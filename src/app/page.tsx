@@ -17,7 +17,7 @@ export default function Home() {
           <SurpriseMessage />
         </main>
         <footer className="text-center py-8 text-primary-foreground/70 font-headline text-lg">
-          <p>Made with Love for the most special person in the world.</p>
+          <p>Made with Love by Rio for Khushi.</p>
           <p>Happy Birthday! - August 15th</p>
         </footer>
       </div>
