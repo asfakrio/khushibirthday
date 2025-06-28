@@ -21,11 +21,11 @@ export function MusicPlayer({ play }: { play: boolean }) {
     } catch (e) {
       console.error("Could not start audio", e);
     }
-  }, []); // Empty dependency array because it only uses refs, which are stable.
+  }, []);
 
   useEffect(() => {
     const player = new Tone.Player({
-      url: "/audio/your-song.mp3",
+      url: "/audio/REPLACE_WITH_YOUR_SONG_FILENAME.mp3",
       loop: true,
       autostart: false,
       onload: () => {
