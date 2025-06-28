@@ -23,7 +23,7 @@ export function MusicPlayer() {
     };
 
     playerRef.current = new Tone.Player({
-      url: "/audio/romantic-music.mp3",
+      url: "/audio/your-song.mp3",
       loop: true,
       autostart: false,
       onload: () => {
