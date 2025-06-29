@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster"
 export const metadata: Metadata = {
   title: 'Khushi Birthday',
   description: 'A special birthday surprise for Khushi!',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
