@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Enchanted Birthday Wish',
-  description: 'A special birthday surprise!',
+  title: 'Khushi Birthday',
+  description: 'A special birthday surprise for Khushi!',
 };
 
 export default function RootLayout({
