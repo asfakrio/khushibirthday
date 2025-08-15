@@ -27,16 +27,21 @@ export function SurpriseMessage() {
             <AlertDialogTitle className="text-4xl font-headline text-primary-foreground opacity-0 animate-text-swoop-in" style={{ animationDelay: '100ms' }}>A Special Message Just For You...</AlertDialogTitle>
             <AlertDialogDescription className="text-2xl font-headline text-secondary-foreground pt-4 leading-relaxed">
               <span className="block opacity-0 animate-text-swoop-in" style={{ animationDelay: '400ms' }}>
-                My dearest Khushi, my love, my everything.
+                Happy birthhdayy myyhh Pagli.!!🫶🏻 Wishing you a very very happy birthday..!! I want give you all credit of my whole happiness.!! I'm truly blessed to have you by my side !! 💗.
               </span>
               <span className="block mt-4 opacity-0 animate-text-swoop-in" style={{ animationDelay: '800ms' }}>
-                On your special day, I want to remind you of the incredible light you bring into my life. Every day with you is a gift. I love you more than words can say.
+                Valo thak amr kaleshi meye ... Tor moto pagli meye ami kokkhono dekhini 😗... Khali kalesh r kalesh.. Sukhe thak ... Kichu kor life aa... Tor masi der tui chara keo nei... Toke kichu ekta korte hobe ... Sei chinta mathai rakh !!! Pora suna toh totaly korisna ... But eei bolchor ta nosto korisna .... Ami genuinely chai tui jeno kichu ekta valo koris... ekta Bhalo jaygai jaash !!!!❤
 
-                Btw eta emni website test er jonne ache pore eti likha change korbo !!!!
+
+ Ami jani ... Amra ki Obosthai achi akhn.. jaa ee thaki na kno always chesta korbo positive thinking ee thakar !!! Samne ki hobe amra janina ... But positive mentality te thaka hobe amader first priority !!!
+              <br/>
+Ami joto din achi emni achi sudhu tor ee hoye ☝🏻🤞🏻 .... But ektu jhamela ta komm kor amr valo lagena 😫!!! Ato choto choto jinise ato khit khit .... Valo lage bol.. tor khit khit dekhe ami nijeo pagol hoye jaay .. 🙂... Ektu sobab gulo thik kor 🙂!!  
+Thank you for being myhh partner & my best friend of my life !!! Love You So Soo Sooo Much Khushi!!!!💗
+
               </span>
               <br/><br/>
               <span className="block opacity-0 animate-text-swoop-in" style={{ animationDelay: '1200ms' }}>
-                Forever and always,
+                Always,
               </span>
               <span className="block opacity-0 animate-text-swoop-in text-3xl text-primary-foreground/90" style={{ animationDelay: '1600ms' }}>
                 Rio
