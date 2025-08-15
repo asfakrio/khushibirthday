@@ -33,7 +33,8 @@ export function SurpriseMessage() {
                 Valo thak amr kaleshi meye ... Tor moto pagli meye ami kokkhono dekhini 😗... Khali kalesh r kalesh.. Sukhe thak ... Kichu kor life aa... Tor masi der tui chara keo nei... Toke kichu ekta korte hobe ... Sei chinta mathai rakh !!! Pora suna toh totaly korisna ... But eei bolchor ta nosto korisna .... Ami genuinely chai tui jeno kichu ekta valo koris... ekta Bhalo jaygai jaash !!!!❤
 
 
- Ami jani ... Amra ki Obosthai achi akhn.. jaa ee thaki na kno always chesta korbo positive thinking ee thakar !!! Samne ki hobe amra janina ... But positive mentality te thaka hobe amader first priority !!!
+ <br/>
+Ami jani ... Amra ki Obosthai achi akhn.. jaa ee thaki na kno always chesta korbo positive thinking ee thakar !!! Samne ki hobe amra janina ... But positive mentality te thaka hobe amader first priority !!!
               <br/>
 Ami joto din achi emni achi sudhu tor ee hoye ☝🏻🤞🏻 .... But ektu jhamela ta komm kor amr valo lagena 😫!!! Ato choto choto jinise ato khit khit .... Valo lage bol.. tor khit khit dekhe ami nijeo pagol hoye jaay .. 🙂... Ektu sovab gulo thik kor 🙂!!  
 Thank you for being myhh partner & my best friend of my life !!! Love You So Soo Sooo Much Khushi!!!!💗
