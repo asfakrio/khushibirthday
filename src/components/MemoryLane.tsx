@@ -14,8 +14,8 @@ const memories = [
     },
     {
         icon: <Heart className="w-8 h-8 text-accent" />,
-        title: "To Forever",
-        text: "Here's to a lifetime of adventures together, my love. Happy Birthday. You are my everything. 🎂❤️"
+        title: "To Jurney",
+        text: "Here's to a lifetime of adventures together, my love. Happy Birthday Love. 🎂❤️"
     }
 ];
 
