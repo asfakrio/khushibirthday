@@ -35,7 +35,7 @@ export function SurpriseMessage() {
 
  Ami jani ... Amra ki Obosthai achi akhn.. jaa ee thaki na kno always chesta korbo positive thinking ee thakar !!! Samne ki hobe amra janina ... But positive mentality te thaka hobe amader first priority !!!
               <br/>
-Ami joto din achi emni achi sudhu tor ee hoye ☝🏻🤞🏻 .... But ektu jhamela ta komm kor amr valo lagena 😫!!! Ato choto choto jinise ato khit khit .... Valo lage bol.. tor khit khit dekhe ami nijeo pagol hoye jaay .. 🙂... Ektu sobab gulo thik kor 🙂!!  
+Ami joto din achi emni achi sudhu tor ee hoye ☝🏻🤞🏻 .... But ektu jhamela ta komm kor amr valo lagena 😫!!! Ato choto choto jinise ato khit khit .... Valo lage bol.. tor khit khit dekhe ami nijeo pagol hoye jaay .. 🙂... Ektu sovab gulo thik kor 🙂!!  
 Thank you for being myhh partner & my best friend of my life !!! Love You So Soo Sooo Much Khushi!!!!💗
 
               </span>
